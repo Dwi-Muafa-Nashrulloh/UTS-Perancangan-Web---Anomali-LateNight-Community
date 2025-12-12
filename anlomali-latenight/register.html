@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Anomali LateNight</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                        url('assets/hero-bg.jpg') center/cover no-repeat fixed;
+            padding: 2rem 0;
+        }
+        .auth-card {
+            background: rgba(17, 17, 17, 0.95);
+            border-radius: 15px;
+            border: 1px solid #dc2626;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .progress-bar {
+            background-color: #dc2626;
+        }
+        .form-floating {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top" style="border-bottom: 2px solid #dc2626;">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="fas fa-moon text-danger me-2"></i>
+                <span class="text-danger">ANOMALI</span> LATE NIGHT
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+                    <div class="auth-card p-4 p-md-5">
+                        <div class="mb-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h1 class="h3 fw-bold text-light">Join Our Community</h1>
+                                <span class="badge bg-danger">Step 1 of 2</span>
+                            </div>
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <form id="registerForm" onsubmit="return validateRegister()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control bg-dark border-secondary text-light" 
+                                               id="reg-username" placeholder="Roblox Username" required>
+                                        <label for="reg-username" class="text-muted">
+                                            <i class="fas fa-user me-2"></i>Roblox Username
+                                        </label>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="email" class="form-control bg-dark border-secondary text-light" 
+                                               id="email" placeholder="Email Address" required>
+                                        <label for="email" class="text-muted">
+                                            <i class="fas fa-envelope me-2"></i>Email Address
+                                        </label>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control bg-dark border-secondary text-light" 
+                                               id="discord" placeholder="Discord Username" required>
+                                        <label for="discord" class="text-muted">
+                                            <i class="fab fa-discord me-2"></i>Discord Username
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-4">
+                                        <input type="password" class="form-control bg-dark border-secondary text-light" 
+                                               id="reg-password" placeholder="Password" required>
+                                        <label for="reg-password" class="text-muted">
+                                            <i class="fas fa-lock me-2"></i>Password
+                                        </label>
+                                        <div class="form-text text-muted mt-1">
+                                            <small>Minimum 8 characters</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="password" class="form-control bg-dark border-secondary text-light" 
+                                               id="confirm-password" placeholder="Confirm Password" required>
+                                        <label for="confirm-password" class="text-muted">
+                                            <i class="fas fa-lock me-2"></i>Confirm Password
+                                        </label>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label text-light">
+                                            <i class="fas fa-users me-2"></i>Preferred Role
+                                        </label>
+                                        <select class="form-select bg-dark border-secondary text-light" id="role">
+                                            <option value="member">Member</option>
+                                            <option value="guard">Guard</option>
+                                            <option value="lead">Lead</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label text-muted" for="terms">
+                                    I agree to the <a href="#" class="text-danger">Terms & Conditions</a> and 
+                                    <a href="#" class="text-danger">Privacy Policy</a>
+                                </label>
+                            </div>
+
+                            <div class="d-grid mb-4">
+                                <button type="submit" class="btn btn-danger btn-lg py-3">
+                                    <i class="fas fa-user-plus me-2"></i>Create Account
+                                </button>
+                            </div>
+
+                            <div class="text-center">
+                                <p class="text-muted mb-0">Already have an account?</p>
+                                <a href="login.html" class="btn btn-outline-danger btn-sm mt-2">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Sign In Here
+                                </a>
+                            </div>
+                        </form>
+
+                        <div class="mt-5 pt-4 border-top border-secondary">
+                            <h5 class="text-light mb-3">
+                                <i class="fas fa-gift me-2 text-danger"></i>Community Benefits
+                            </h5>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-danger rounded-circle p-2 me-3">
+                                            <i class="fas fa-trophy text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 text-light">Tournaments</h6>
+                                            <small class="text-muted">Compete for prizes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-danger rounded-circle p-2 me-3">
+                                            <i class="fas fa-users text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 text-light">Squad System</h6>
+                                            <small class="text-muted">Team up with players</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-danger rounded-circle p-2 me-3">
+                                            <i class="fas fa-star text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 text-light">Rank System</h6>
+                                            <small class="text-muted">Level up your rank</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black border-top border-danger py-4">
+        <div class="container text-center">
+            <p class="mb-0 text-light">@Copyright by 241010007_Dwi Mu'afa Nashrulloh_TRPL A 2024/2025</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

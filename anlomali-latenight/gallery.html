@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Anomali LateNight</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top border-bottom border-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="fas fa-moon text-danger me-2"></i>
+                <span class="text-danger">ANOMALI</span> LATE NIGHT
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gallery-header py-5 mt-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-center mb-4">GALLERY</h1>
+            <p class="text-center lead">Memories from our events and activities</p>
+        </div>
+    </section>
+
+    <section id="upload-section" class="py-4 bg-black" style="display: none;">
+        <div class="container">
+            <div class="card bg-dark border-danger">
+                <div class="card-body">
+                    <h4 class="text-danger mb-3"><i class="fas fa-upload me-2"></i>Upload New Photo</h4>
+                    <form id="uploadForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="file" class="form-control bg-dark text-light" id="photoInput" accept="image/*" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <input type="text" class="form-control bg-dark text-light" id="photoCaption" placeholder="Photo caption" required>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <button type="submit" class="btn btn-danger w-100">Upload</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="gallery-grid">
+                <div class="col-md-3 mb-4">
+                    <div class="gallery-item">
+                        <img src="assets/gallery/1.jpg" class="img-fluid rounded" alt="Event Photo">
+                        <div class="gallery-caption">Midnight Tournament 2024</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="gallery-item">
+                        <img src="assets/gallery/2.jpg" class="img-fluid rounded" alt="Event Photo">
+                        <div class="gallery-caption">Squad War Winners</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="gallery-item">
+                        <img src="assets/gallery/3.jpg" class="img-fluid rounded" alt="Event Photo">
+                        <div class="gallery-caption">Community Meetup</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="gallery-item">
+                        <img src="assets/gallery/4.jpg" class="img-fluid rounded" alt="Event Photo">
+                        <div class="gallery-caption">New Year Celebration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-top border-danger py-4">
+        <div class="container text-center">
+            <p class="mb-0">@Copyright by 241010007_Dwi Mu'afa Nashrulloh_TRPL A 2024/2025</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="photoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-danger">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="">
+                    <p id="modalCaption" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

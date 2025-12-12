@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Anomali LateNight</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .events-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/hero-bg.jpg') center/cover no-repeat;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        .event-detail-card {
+            background: rgba(38, 38, 38, 0.7);
+            border: 1px solid #dc2626;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .event-detail-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .event-meta p {
+            color: #a0a0a0;
+            margin-bottom: 0.5rem;
+        }
+        .table-dark {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top border-bottom border-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="fas fa-moon text-danger me-2"></i>
+                <span class="text-danger">ANOMALI</span> LATE NIGHT
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="events-header py-5 mt-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-center mb-4">OUR EVENTS</h1>
+            <p class="text-center lead">Join our exciting tournaments and community activities</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="card mb-5 event-detail-card" id="event1">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="assets/events/event1.jpg" class="img-fluid rounded-start" alt="Midnight Tournament">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-4">
+                            <span class="badge bg-danger mb-3">UPCOMING</span>
+                            <h3 class="card-title text-danger">Midnight Tournament</h3>
+                            <div class="event-meta mb-3">
+                                <p class="mb-1"><i class="fas fa-calendar me-2"></i>15 Desember 2025</p>
+                                <p class="mb-1"><i class="fas fa-clock me-2"></i>20:00 - 23:00 WIB</p>
+                                <p class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>Roblox Platform</p>
+                            </div>
+                            <p class="card-text">Monthly Roblox competition featuring multiple games with amazing prizes. Open to all members.</p>
+                            
+                            <h5 class="mt-4">Games:</h5>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-2">mount 1</span>
+                                <span class="badge bg-secondary me-2">mount 2</span>
+                                <span class="badge bg-secondary me-2">mount 3</span>
+                                <span class="badge bg-secondary">mount 4</span>
+                            </div>
+                            
+                            <h5>Prizes:</h5>
+                            <ul class="mb-4">
+                                <li>1st Place: 1000 Robux + Special Badge</li>
+                                <li>2nd Place: 500 Robux</li>
+                                <li>3rd Place: 250 Robux</li>
+                            </ul>
+                            
+                            <button class="btn btn-danger" onclick="registerEvent(1)">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 event-detail-card" id="event2">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="assets/events/event2.jpg" class="img-fluid rounded-start" alt="Squad War">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning mb-3">REGISTRATION OPEN</span>
+                            <h3 class="card-title text-danger">mount 1</h3>
+                            <div class="event-meta mb-3">
+                                <p class="mb-1"><i class="fas fa-calendar me-2"></i>22 Desember 2025</p>
+                                <p class="mb-1"><i class="fas fa-clock me-2"></i>21:00 - 00:00 WIB</p>
+                                <p class="mb-3"><i class="fas fa-users me-2"></i>Summit tercepat</p>
+                            </div>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sint iusto. Consequuntur, voluptas repudiandae commodi dolorem laudantium quidem magnam voluptatibus delectus totam. Earum corporis, in dolor id inventore laudantium tempora!</p>
+                            
+                            <h5 class="mt-4">Requirements:</h5>
+                            <ul class="mb-3">
+                                <li>Must have skill</li>
+                                <li>Minimum Jam 10 in Roblox</li>
+                                <li>Registered member for at least 1 month</li>
+                            </ul>
+                            
+                            <h5>Game Modes:</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-secondary me-2">entah 1</span>
+                                <span class="badge bg-secondary me-2">entah 2</span>
+                                <span class="badge bg-secondary">entah 3</span>
+                            </div>
+                            
+                            <button class="btn btn-danger" onclick="registerEvent(2)">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card event-detail-card" id="event3">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="assets/events/event3.jpg" class="img-fluid rounded-start" alt="New Year">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-4">
+                            <span class="badge bg-info mb-3">SPECIAL EVENT</span>
+                            <h3 class="card-title text-danger">New Year Special</h3>
+                            <div class="event-meta mb-3">
+                                <p class="mb-1"><i class="fas fa-calendar me-2"></i>31 Desember 2025</p>
+                                <p class="mb-1"><i class="fas fa-clock me-2"></i>22:00 - 02:00 WIB</p>
+                                <p class="mb-3"><i class="fas fa-gift me-2"></i>Giveaways & Prizes</p>
+                            </div>
+                            <p class="card-text">Celebrate new year with special games, giveaways, and community party.</p>
+                            
+                            <h5 class="mt-4">Activities:</h5>
+                            <ul class="mb-3">
+                                <li>Robux Giveaways every hour</li>
+                                <li>Mini-games competition</li>
+                                <li>Virtual party with music</li>
+                                <li>Special countdown event</li>
+                            </ul>
+                            
+                            <h5>Schedule:</h5>
+                            <table class="table table-dark table-sm mb-4">
+                                <tr><td>22:00</td><td>Opening & Games</td></tr>
+                                <tr><td>23:30</td><td>Main Tournament</td></tr>
+                                <tr><td>00:00</td><td>New Year Countdown</td></tr>
+                                <tr><td>00:30</td><td>Prize Distribution</td></tr>
+                            </table>
+                            
+                            <button class="btn btn-danger" onclick="registerEvent(3)">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-top border-danger py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">@Copyright by 241010007_Dwi Mu'afa Nashrulloh_TRPL A 2024/2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function registerEvent(eventId) {
+            if(localStorage.getItem('loggedIn')) {
+                alert('Registration successful for Event ' + eventId + '!');
+                let registeredEvents = JSON.parse(localStorage.getItem('registeredEvents') || '[]');
+                if(!registeredEvents.includes(eventId)) {
+                    registeredEvents.push(eventId);
+                    localStorage.setItem('registeredEvents', JSON.stringify(registeredEvents));
+                }
+            } else {
+                alert('Please login first to register for events!');
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+</body>
+</html>
